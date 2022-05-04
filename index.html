@@ -5,9 +5,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>시작</h1>
-    <img src="./images/test.jpg" alt="Test" />
+    <header id="header">
+      <div class="wrap">
+        <a href="/">
+          <h1 class="logo"><span>텀블벅</span></h1>
+        </a>
+        <div class="sub-nav">
+          <a class="project-update-btn" href="/">프로젝트 올리기</a>
+          <a class="search-btn" href="/">
+            <img src="./images/search_icon.svg" alt="검색" />
+          </a>
+          <a class="interest-btn" href="/">
+            <img src="./images/heart_icon.svg" alt="관심프로젝트" />
+          </a>
+          <a class="alarm-btn" href="/">
+            <img src="./images/alarm_icon.svg" alt="알림" />
+          </a>
+          <button class="user-btn">
+            <span> user** </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="header_nav">
+      <div class="wrap">
+        <nav class="header_bottom-nav">
+          <div class="category">
+            <div class="hamburger-icon">
+              <div class="line"></div>
+            </div>
+            카테고리
+          </div>
+          <a href="/" class="selected">홈</a>
+          <a href="/">인기</a>
+          <a href="/">신규</a>
+          <a href="/">마감임박</a>
+          <a href="/">공개예정</a>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="검색어를 입력해주세요" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

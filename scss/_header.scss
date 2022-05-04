@@ -1,0 +1,204 @@
+@import "./mixin";
+
+#header {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  .wrap {
+    display: flex;
+    padding: 0 20px;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    background: url("../static/images/logo.svg") no-repeat;
+    background-size: 140px 36px;
+    width: 140px;
+    height: 36px;
+    span {
+      @include hidden;
+    }
+    @include mobile {
+      background-size: 103px 28px;
+      width: 103px;
+      height: 28px;
+    }
+  }
+  .sub-nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    @include mobile {
+      height: 48px;
+    }
+    a {
+      padding: 12px;
+      font-weight: bold;
+      font-size: 12px;
+      color: #191919;
+      @include mobile {
+        padding: 10px;
+      }
+    }
+    .search-btn {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+    .project-update-btn {
+      @include mobile {
+        display: none;
+      }
+    }
+    .alarm-btn {
+      position: relative;
+      &::before {
+        position: absolute;
+        display: block;
+        right: 12px;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: #fe5f4c;
+        content: "";
+      }
+    }
+    .user-btn {
+      display: flex;
+      align-items: center;
+      height: 42px;
+      border: 1px solid rgb(208, 208, 208);
+      border-radius: 4px;
+      padding: 16px;
+      margin-left: 10px;
+      background-color: #fff;
+      box-sizing: border-box;
+      font-weight: bold;
+      cursor: pointer;
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: rgb(208, 208, 208);
+        color: #fff;
+        content: "K";
+      }
+      @include mobile {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        &::before {
+          margin-right: 0;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#header_nav {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  padding: 0 20px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 6px;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .category {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-right: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: #fe5f4c;
+      .line,
+      .line::before,
+      .line::after {
+        background-color: #fe5f4c;
+      }
+    }
+    .hamburger-icon {
+      margin-right: 10px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  .header_bottom-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    a {
+      display: block;
+      height: 56px;
+      padding: 0 6px;
+      margin-right: 18px;
+      line-height: 56px;
+      white-space: nowrap;
+      font-size: 15px;
+      font-weight: bold;
+      transition: all 0.3s;
+      &:hover {
+        color: #fe5f4c;
+      }
+      @include mobile {
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+    .selected {
+      border-bottom: 2px solid black;
+      box-sizing: border-box;
+    }
+  }
+  .search-bar {
+    position: sticky;
+    top: 0;
+    align-items: center;
+    display: flex;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: #f6f5f5;
+    @include mobile {
+      display: none;
+    }
+    input {
+      min-width: 145px;
+      border: none;
+      background-color: #f6f5f5;
+      outline: none;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    &::after {
+      width: 24px;
+      height: 24px;
+      background: url("../static/images/search_icon.svg") no-repeat;
+      background-size: cover;
+      content: "";
+      cursor: pointer;
+    }
+  }
+}
