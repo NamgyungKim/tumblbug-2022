@@ -1,6 +1,7 @@
 .project-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
   h2 {
     color: #1c1c1c;
@@ -82,6 +83,7 @@
     font-size: 11px;
     font-weight: 200;
     color: $color-6d;
+    @include ellipsis(1);
     span:first-child::after {
       margin: 0 6px;
       color: rgb(208 208 208);
@@ -97,6 +99,7 @@
     font-weight: bold;
     color: $color-3d;
     line-height: 20px;
+    height: 40px;
     @include ellipsis(2);
   }
   .funding-status {
@@ -120,11 +123,9 @@
   cursor: pointer;
 }
 .prev-btn {
-  left: 20px;
-  transform: translateX(-50%);
+  left: 0;
   visibility: hidden;
 }
 .next-btn {
-  right: 20px;
-  transform: translateX(50%);
+  right: 0;
 }

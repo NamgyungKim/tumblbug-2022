@@ -1,5 +1,8 @@
 #footer {
   border-top: 1px solid $color-f0;
+  .wrap {
+    padding: 0 20px;
+  }
   h4 {
     font-size: 16px;
     font-weight: bold;
@@ -34,7 +37,6 @@
   .footer_top {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     @include desktop {
       flex-direction: column;
     }
@@ -170,11 +172,10 @@
   .footer_bottom {
     display: flex;
     justify-content: space-between;
-    margin: 18px 20px 0;
+    margin: 18px 0 0;
     border-top: 1px solid $color-f0;
     @include desktop {
       flex-direction: column;
-      margin: 0 20px;
       border: none;
     }
   }
@@ -244,7 +245,7 @@
 
   // footer_notify
   .footer_notify {
-    padding: 10px 16px;
+    padding: 10px 0;
     background-color: $color-f0;
     color: $color-6d;
     line-height: 18px;

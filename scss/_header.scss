@@ -3,7 +3,7 @@
 #header {
   position: relative;
   background-color: #fff;
-  z-index: 1;
+  z-index: 10;
   .wrap {
     display: flex;
     padding: 0 20px;
@@ -113,6 +113,7 @@
   top: 0;
   padding: 0 20px;
   box-shadow: rgb(0 0 0 / 8%) 0px 1px 6px;
+  z-index: 10;
   .wrap {
     display: flex;
     justify-content: space-between;

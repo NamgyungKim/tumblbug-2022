@@ -17,7 +17,7 @@
 
   .main-slide {
     @include desktop-min {
-      margin: 0 0 45px 0;
+      margin: 0 0 30px 0;
       width: 766px;
     }
     @include tablet {
@@ -59,7 +59,6 @@
     }
     .project-card {
       width: 180px;
-      padding: 0 0 26px;
       @include desktop {
         width: auto;
       }
@@ -88,7 +87,10 @@
     }
     .overflow-frame {
       width: 100%;
-      overflow-x: auto;
+
+      @include desktop {
+        overflow-x: auto;
+      }
     }
 
     .popular-project-wrap {
@@ -97,10 +99,6 @@
         display: flex;
         justify-content: space-between;
         gap: 20px;
-      }
-      @include tablet {
-        width: 100%;
-        overflow-x: auto;
       }
     }
 
@@ -139,6 +137,10 @@
     .project-image {
       @include desktop-min {
         min-width: 100px !important;
+        max-width: 100px !important;
+      }
+      @include desktop {
+        max-width: 100px !important;
       }
     }
 
