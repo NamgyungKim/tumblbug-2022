@@ -1,4 +1,4 @@
-@import "reset-css", "./mixin", "./header", "./footer";
+@import "reset-css", "./mixin", "./header", "./footer", "./project-card";
 
 // scroll
 ::-webkit-scrollbar {
@@ -15,7 +15,6 @@
 
 // common
 body {
-  height: 2000px;
   font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -33,6 +32,7 @@ a {
 .wrap {
   max-width: 1160px;
   margin: auto;
+  overflow: hidden;
 }
 
 .hamburger-icon {
