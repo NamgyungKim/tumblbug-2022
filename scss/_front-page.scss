@@ -1,0 +1,166 @@
+#front-page .wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 56px auto 0;
+  @include desktop-min {
+    padding: 0 20px;
+  }
+  @include desktop {
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .front-page-left {
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  .main-slide {
+    @include desktop-min {
+      margin: 0 0 45px 0;
+      width: 766px;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+    .mobile,
+    .desktop {
+      width: 100%;
+    }
+    .mobile {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+    .desktop {
+      display: block;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  .project-wrap {
+    border: none;
+    @include desktop-min {
+      width: 766px;
+      padding-left: 0;
+    }
+    @include desktop {
+      margin-bottom: 44px;
+    }
+    .project-card-wrap {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include desktop {
+        flex-wrap: nowrap;
+      }
+    }
+    .project-card {
+      width: 180px;
+      padding: 0 0 26px;
+      @include desktop {
+        width: auto;
+      }
+    }
+    .next-btn {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+    .project-image {
+      @include desktop-min {
+        width: 180px !important;
+      }
+    }
+  }
+
+  .popular-project {
+    position: relative;
+    max-width: 314px;
+    @include desktop {
+      max-width: 100%;
+      margin: 0 20px 50px;
+      padding-bottom: 60px;
+      border-top: 1px solid $color-f0;
+    }
+    .overflow-frame {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .popular-project-wrap {
+      @include desktop {
+        min-width: 630px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      @include tablet {
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+
+    .project-title {
+      align-items: center;
+      margin-bottom: 1px;
+      line-height: 1.5;
+      @include desktop {
+        margin-top: 20px;
+      }
+      a {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+    p {
+      font-size: 12px;
+      color: $color-6d;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .rank {
+      min-width: 40px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+    .top-3 {
+      color: $color-red;
+    }
+    .project-card {
+      display: flex;
+      margin-bottom: 14px;
+    }
+    .project-image {
+      @include desktop-min {
+        min-width: 100px !important;
+      }
+    }
+
+    dl {
+      margin-top: 0;
+    }
+
+    button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 231px;
+      height: 42px;
+      margin: 8px auto 0;
+      border-radius: 42px;
+      box-shadow: rgb(0 0 0 / 5%) 0px 1px 8px;
+      @include desktop {
+        bottom: 0;
+      }
+      &:hover {
+        background: rgb(242, 242, 242);
+      }
+    }
+  }
+}

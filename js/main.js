@@ -5,7 +5,7 @@ let projectSlidePage = Array.from({ length: 5 }, () => 0);
 const articleLength = 8;
 
 const $project = document.querySelectorAll(".project-wrap");
-const $projectOuterWrap = document.querySelector(".project-card-outer");
+const $projectOuterWrap = document.querySelector(".standard-card-size");
 const $projectButtonWrap = document.querySelectorAll(".project-button-wrap");
 const $projectCards = document.querySelectorAll(".project-image");
 

@@ -9,6 +9,11 @@ $color-6d: #6d6d6d;
 $color-9e: #9e9e9e;
 $color-f0: #f0f0f0;
 
+@mixin desktop-min {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (max-width: #{$breakpoint-desktop}) {
     @content;
