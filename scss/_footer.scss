@@ -191,7 +191,12 @@
       width: auto;
       height: auto;
     }
+    .introduce {
+      display: inline-flex;
+      margin-right: 5px;
+    }
     b {
+      margin-right: 5px;
       font-weight: 500;
     }
     span {

@@ -135,17 +135,20 @@
       margin-bottom: 14px;
     }
     .project-image {
+      min-width: 110px !important;
+      max-width: 110px !important;
       @include desktop-min {
-        min-width: 100px !important;
-        max-width: 100px !important;
       }
       @include desktop {
-        max-width: 100px !important;
+        max-width: 110px !important;
       }
     }
 
     dl {
       margin-top: 0;
+      dd {
+        width: 160px;
+      }
     }
 
     button {
