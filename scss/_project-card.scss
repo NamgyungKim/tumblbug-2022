@@ -59,6 +59,13 @@
   .project-image {
     overflow: hidden;
     transition: all 0.3s;
+    width: 220px;
+    @include desktop {
+      width: calc(20vw - 20px);
+    }
+    @include tablet {
+      width: calc(40vw - 28px);
+    }
     a {
       display: block;
       line-height: 0;
@@ -84,6 +91,13 @@
     font-weight: 200;
     color: $color-6d;
     @include ellipsis(1);
+    width: 220px;
+    @include desktop {
+      width: calc(20vw - 20px);
+    }
+    @include tablet {
+      width: calc(40vw - 28px);
+    }
     span:first-child::after {
       margin: 0 6px;
       color: rgb(208 208 208);

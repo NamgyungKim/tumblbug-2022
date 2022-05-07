@@ -7,7 +7,6 @@ const articleLength = 8;
 const $project = document.querySelectorAll(".project-wrap");
 const $projectOuterWrap = document.querySelector(".standard-card-size");
 const $projectButtonWrap = document.querySelectorAll(".project-button-wrap");
-const $projectCard = document.querySelectorAll(".project-card");
 
 // resizing시 reset
 const resizing = () => {
@@ -21,26 +20,6 @@ const resizing = () => {
     $prevBtn.style = "visibility: hidden;";
     $nextBtn.style = "visibility: visible;";
   });
-
-  // project-card resizing
-  const windowInnerWidth = window.innerWidth;
-  if (windowInnerWidth > 768) {
-    const projectCardWidth = ($projectOuterWrap.offsetWidth - 56) / 5;
-    $projectCard.forEach((card) => {
-      card.querySelector(
-        ".project-image"
-      ).style = `width:${projectCardWidth}px;`;
-      card.querySelector("dd").style = `width:${projectCardWidth}px;`;
-    });
-  } else {
-    const projectCardWidth = ($projectOuterWrap.offsetWidth - 28) / 2.5;
-    $projectCard.forEach((card) => {
-      card.querySelector(
-        ".project-image"
-      ).style = `width:${projectCardWidth}px;`;
-      card.querySelector("dd").style = `width:${projectCardWidth}px;`;
-    });
-  }
 };
 
 const projectSlideTransform = ($project, page) => {
