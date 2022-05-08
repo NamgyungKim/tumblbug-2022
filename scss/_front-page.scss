@@ -15,17 +15,29 @@
     }
   }
 
-  .main-slide {
+  .main-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
     @include desktop-min {
       margin: 0 0 30px 0;
       width: 766px;
     }
+    @include desktop {
+      width: 100%;
+    }
     @include tablet {
       margin-left: 0;
     }
-    .mobile,
-    .desktop {
-      width: 100%;
+    .slider-outer {
+      width: 400%;
+      display: flex;
+    }
+    img {
+      width: 766px;
+      @include desktop {
+        width: 100%;
+      }
     }
     .mobile {
       display: none;
@@ -37,6 +49,71 @@
       display: block;
       @include tablet {
         display: none;
+      }
+    }
+    .slider-outer {
+      transition: 0.5s;
+    }
+    .slider-inner {
+      position: relative;
+    }
+    .slider-text {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+      }
+
+      .slider-text-title {
+        margin-bottom: 5px;
+      }
+      .slider-text-title p {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+    .slider_controller {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 30px;
+      right: 30px;
+      .slider_pagination {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        padding: 1px 9px;
+        border-radius: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        line-height: 20px;
+        strong {
+          color: #fff;
+        }
+      }
+      .slider_nav {
+        display: flex;
+      }
+      .slider_nav-left,
+      .slider_nav-right {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+        width: 32px;
+        height: 32px;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        border: none;
+        border-radius: 50%;
+        transition: all 0.5s;
+        &:hover {
+          background-color: black;
+        }
+      }
+      .slider_nav-right {
+        transform: rotate(180deg);
       }
     }
   }
