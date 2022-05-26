@@ -1,8 +1,12 @@
 import "../scss/main.scss";
 
-// project슬라이트 페이지
-let projectSlidePage = Array.from({ length: 5 }, () => 0);
-const articleLength = 8;
+const NUMBER_OF_PROJECT_SLIDE = 5;
+const MAX_NUMBER_OF_IMAGE_WITH_PC = 5;
+const MAX_NUMBER_OF_IMAGE_WITH_MOBILE = 3;
+const ARTICLE_LENGTH = 8;
+
+// project슬라이드 페이지
+let projectSlidePage = Array.from({ length: NUMBER_OF_PROJECT_SLIDE }, () => 0);
 
 const $project = document.querySelectorAll(".project-wrap");
 const $projectOuterWrap = document.querySelector(".standard-card-size");
@@ -11,14 +15,14 @@ const $projectButtonWrap = document.querySelectorAll(".project-button-wrap");
 // resizing시 reset
 const resizing = () => {
   // btn reset
-  projectSlidePage = Array.from({ length: 5 }, () => 0);
+  projectSlidePage = Array.from({ length: NUMBER_OF_PROJECT_SLIDE }, () => 0);
   $project.forEach((item) => {
     const $cardWrap = item.querySelector(".project-card-wrap");
     const $prevBtn = item.querySelector(".prev-btn");
     const $nextBtn = item.querySelector(".next-btn");
     $cardWrap.style = "transform: translateX(0px)";
-    $prevBtn.style = "visibility: hidden;";
-    $nextBtn.style = "visibility: visible;";
+    $prevBtn.className += " hidden";
+    $nextBtn.classList.remove("hidden");
   });
 };
 
@@ -46,22 +50,22 @@ const btnVisibility = ($project, id) => {
   const $prevBtn = $project.querySelector(".prev-btn");
   const $nextBtn = $project.querySelector(".next-btn");
   if (id == 0) {
-    $prevBtn.style = "visibility: hidden;";
+    $prevBtn.className += " hidden";
   } else if (id == maxPage()) {
-    $nextBtn.style = "visibility: hidden;";
+    $nextBtn.className += " hidden";
   } else {
-    $nextBtn.style = "visibility: visible;";
-    $prevBtn.style = "visibility: visible;";
+    $prevBtn.classList.remove("hidden");
+    $nextBtn.classList.remove("hidden");
   }
 };
 
-// project-articleLength-page
+// project-ARTICLE_LENGTH-page
 const maxPage = () => {
   const windowInnerWidth = window.innerWidth;
   if (windowInnerWidth > 768) {
-    return articleLength - 5;
+    return ARTICLE_LENGTH - MAX_NUMBER_OF_IMAGE_WITH_PC;
   } else {
-    return articleLength - 3;
+    return ARTICLE_LENGTH - MAX_NUMBER_OF_IMAGE_WITH_MOBILE;
   }
 };
 

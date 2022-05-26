@@ -138,8 +138,12 @@
 }
 .prev-btn {
   left: 0;
-  visibility: hidden;
 }
 .next-btn {
   right: 0;
+}
+
+.prev-btn.hidden,
+.next-btn.hidden {
+  visibility: hidden;
 }
