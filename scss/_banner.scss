@@ -1,11 +1,11 @@
 #banner {
-  .banner1,
-  .banner2 {
+  .banner-subscribe,
+  .banner-advert {
     width: 100%;
     box-sizing: border-box;
   }
 
-  .banner1 {
+  .banner-subscribe {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@
       }
     }
   }
-  .banner2 {
+  .banner-advert {
     margin-top: 33px;
     margin-bottom: 90px;
     background-color: #ff5a5a;
