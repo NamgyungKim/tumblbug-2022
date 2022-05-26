@@ -27,7 +27,7 @@
       text-align: center;
       line-height: 14px;
       content: "N";
-      @include desktop {
+      @include media(desktop) {
         display: none;
       }
     }
@@ -37,7 +37,7 @@
   .footer_top {
     display: flex;
     justify-content: space-between;
-    @include desktop {
+    @include media(desktop) {
       flex-direction: column;
     }
   }
@@ -47,7 +47,7 @@
     flex-wrap: wrap;
     margin-top: 24px;
     ul {
-      @include desktop {
+      @include media(desktop) {
         display: flex;
       }
       &:last-child {
@@ -58,21 +58,21 @@
     ul:nth-child(1) {
       margin-top: 0;
       width: 122px;
-      @include desktop {
+      @include media(desktop) {
         width: auto;
       }
     }
     ul:nth-child(2),
     ul:nth-child(3) {
       width: 160px;
-      @include desktop {
+      @include media(desktop) {
         width: auto;
       }
     }
     li {
       font-size: 14px;
       margin-top: 10px;
-      @include desktop {
+      @include media(desktop) {
         margin: 8px 16px 0 0;
         white-space: nowrap;
       }
@@ -81,7 +81,7 @@
         color: $color-3d;
       }
       &:first-child {
-        @include desktop {
+        @include media(desktop) {
           display: none;
         }
       }
@@ -91,7 +91,7 @@
       color: $color-6d;
       line-height: 22px;
       font-weight: 500;
-      @include desktop {
+      @include media(desktop) {
         font-size: 13px;
       }
     }
@@ -101,7 +101,7 @@
     width: 200px;
     height: 154px;
     margin-top: 24px;
-    @include desktop {
+    @include media(desktop) {
       width: 100%;
       height: auto;
     }
@@ -120,7 +120,7 @@
       &:hover {
         border: 1px solid $color-3d;
       }
-      @include desktop {
+      @include media(desktop) {
         width: 100%;
         height: 42px;
       }
@@ -130,14 +130,14 @@
   .app {
     display: flex;
     flex-direction: column;
-    @include desktop {
+    @include media(desktop) {
       width: 100%;
       flex-direction: row;
       margin-top: 24px;
     }
     h4 {
       margin: 10px 0;
-      @include desktop {
+      @include media(desktop) {
         display: none;
       }
     }
@@ -158,7 +158,7 @@
       &:hover {
         color: $color-3d;
       }
-      @include desktop {
+      @include media(desktop) {
         width: 106px;
         height: 32px;
         font-size: 12px;
@@ -174,7 +174,7 @@
     justify-content: space-between;
     margin: 18px 0 0;
     border-top: 1px solid $color-f0;
-    @include desktop {
+    @include media(desktop) {
       flex-direction: column;
       border: none;
     }
@@ -187,7 +187,7 @@
     line-height: 18px;
     color: $color-6d;
     cursor: default;
-    @include desktop {
+    @include media(desktop) {
       width: auto;
       height: auto;
     }
@@ -203,14 +203,14 @@
       font-weight: 300;
       line-height: 20px;
       white-space: nowrap;
-      @include desktop {
+      @include media(desktop) {
         font-size: 11px;
       }
     }
     p {
       color: $color-9e;
       line-height: 20px;
-      @include desktop {
+      @include media(desktop) {
         font-size: 13px;
       }
     }
@@ -220,7 +220,7 @@
     height: 76px;
     padding: 10px 0;
     margin-top: auto;
-    @include desktop {
+    @include media(desktop) {
       height: 32px;
       padding-bottom: 30px;
     }

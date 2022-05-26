@@ -11,13 +11,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: #ceff00;
-    @include desktop {
+    @include media(desktop) {
       flex-direction: row-reverse;
     }
     .banner_img {
       width: 243px;
       padding-right: 32px;
-      @include desktop {
+      @include media(desktop) {
         width: 40px;
         padding-left: 20px;
         padding-right: 0;
@@ -25,7 +25,7 @@
     }
     .banner_text-wrap {
       display: flex;
-      @include desktop {
+      @include media(desktop) {
         flex-direction: column;
       }
     }
@@ -34,13 +34,13 @@
       padding: 39px 32px;
       border-left: 1px solid black;
       border-right: 1px solid black;
-      @include desktop {
+      @include media(desktop) {
         border: none;
         padding: 0;
       }
       img {
         width: 148px;
-        @include desktop {
+        @include media(desktop) {
           width: 200px;
         }
       }
@@ -53,7 +53,7 @@
       font-size: 14px;
       text-align: center;
       font-weight: 300;
-      @include desktop {
+      @include media(desktop) {
         width: auto;
         margin-top: 5px;
         padding: 0;
@@ -63,7 +63,7 @@
     .subscribe-btn {
       padding: 39px 20px 39px 32px;
       border-left: 1px solid black;
-      @include desktop {
+      @include media(desktop) {
         display: none;
       }
       button {
@@ -80,7 +80,7 @@
     margin-top: 33px;
     margin-bottom: 90px;
     background-color: #ff5a5a;
-    @include desktop {
+    @include media(desktop) {
       margin-top: 15px;
     }
     a {
@@ -90,7 +90,7 @@
       padding: 30px 40px;
       box-sizing: border-box;
       background: url("../static/images/bannerImg2.svg") 97% center no-repeat;
-      @include desktop {
+      @include media(desktop) {
         background: url("../static/images/m_bannerImg2.svg") 97% center
           no-repeat;
       }
@@ -103,26 +103,26 @@
     p:first-child {
       font-size: 14px;
       margin-bottom: 8px;
-      @include desktop {
+      @include media(desktop) {
         font-size: 12px;
       }
     }
     p:last-child {
       font-size: 28px;
-      @include desktop {
+      @include media(desktop) {
         font-size: 16px;
       }
     }
   }
 
   .desktop_img {
-    @include desktop {
+    @include media(desktop) {
       display: none;
     }
   }
   .m_img {
     display: none;
-    @include desktop {
+    @include media(desktop) {
       display: block;
     }
   }

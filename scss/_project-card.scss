@@ -8,14 +8,14 @@
     font-size: 20px;
     font-weight: bold;
     cursor: default;
-    @include tablet {
+    @include media(tablet) {
       font-size: 18px;
     }
   }
   a {
     font-size: 16px;
     color: $color-6d;
-    @include tablet {
+    @include media(tablet) {
       font-size: 14px;
     }
   }
@@ -60,10 +60,10 @@
     overflow: hidden;
     transition: all 0.3s;
     width: 220px;
-    @include desktop {
+    @include media(desktop) {
       width: calc(20vw - 20px);
     }
-    @include tablet {
+    @include media(tablet) {
       width: calc(40vw - 28px);
     }
     a {
@@ -92,10 +92,10 @@
     color: $color-6d;
     @include ellipsis(1);
     width: 220px;
-    @include desktop {
+    @include media(desktop) {
       width: calc(20vw - 20px);
     }
-    @include tablet {
+    @include media(tablet) {
       width: calc(40vw - 28px);
     }
     span:first-child::after {
