@@ -127,16 +127,18 @@
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s;
+    svg {
+      transition: all 0.3s;
+    }
     &:hover {
       color: #fe5f4c;
-      .line,
-      .line::before,
-      .line::after {
-        background-color: #fe5f4c;
+      svg {
+        fill: #fe5f4c;
       }
     }
-    .hamburger-icon {
+    svg {
       margin-right: 10px;
+      width: 25px;
     }
     @include media(mobile) {
       font-size: 14px;
