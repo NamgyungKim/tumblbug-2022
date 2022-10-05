@@ -102,6 +102,9 @@
       }
       .slider_nav {
         display: flex;
+        @include media(tablet) {
+          display: none;
+        }
       }
       .slider_nav-left,
       .slider_nav-right {
