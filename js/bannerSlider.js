@@ -22,13 +22,13 @@ console.log($slider.children[3]);
 const nextEvent = async () => {
   SLIDE_COUNT++;
   $currentPage.innerText = SLIDE_COUNT > NUMBER_OF_SLIDE ? "1" : SLIDE_COUNT;
-  $slider.style.transform = `translateX(-${SLIDE_COUNT}00vw)`;
+  translateX();
 
   if (SLIDE_COUNT > NUMBER_OF_SLIDE) {
     await delay(400);
     $slider.style.transition = "none";
     SLIDE_COUNT = 1;
-    $slider.style.transform = `translateX(-${SLIDE_COUNT}00vw)`;
+    translateX();
     await delay(100);
     $slider.style.transition = "translateX, 0.4s";
   }
@@ -36,16 +36,22 @@ const nextEvent = async () => {
 const prevEvent = async () => {
   SLIDE_COUNT--;
   $currentPage.innerText = SLIDE_COUNT < 1 ? NUMBER_OF_SLIDE : SLIDE_COUNT;
-  $slider.style.transform = `translateX(-${SLIDE_COUNT}00vw)`;
-
+  translateX();
   if (SLIDE_COUNT < 1) {
     await delay(400);
     $slider.style.transition = "none";
     SLIDE_COUNT = NUMBER_OF_SLIDE;
-    $slider.style.transform = `translateX(-${SLIDE_COUNT}00vw)`;
+    translateX();
     await delay(100);
     $slider.style.transition = "translateX, 0.4s";
   }
+};
+
+const translateX = () => {
+  if (window.innerWidth > 1080) {
+    return ($slider.style.transform = `translateX(calc(-${SLIDE_COUNT}*766px))`);
+  }
+  return ($slider.style.transform = `translateX(-${SLIDE_COUNT}00vw)`);
 };
 
 $nextBtn.addEventListener("click", throttle(nextEvent, 500));
@@ -53,9 +59,10 @@ $prevBtn.addEventListener("click", throttle(prevEvent, 500));
 
 // resizing할때 translate으로 움직이지 않도록 고정
 $slider.style.transition = "translateX, 0.4s";
-const transform = async () => {
+const transition = async () => {
   $slider.style.transition = "none";
   await delay(400);
   $slider.style.transition = "translateX, 0.4s";
 };
-window.addEventListener("resize", throttle(transform, 400));
+window.addEventListener("resize", throttle(transition, 400));
+window.addEventListener("resize", translateX);
