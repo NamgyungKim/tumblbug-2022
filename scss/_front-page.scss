@@ -30,7 +30,7 @@
       margin-left: 0;
     }
     .slider-outer {
-      width: 400%;
+      width: max-content;
       display: flex;
     }
     img {
@@ -52,10 +52,17 @@
       }
     }
     .slider-outer {
-      transition: 0.5s;
+      transform: translateX(-766px);
+      @include media(desktop) {
+        transform: translateX(-100vw);
+      }
     }
     .slider-inner {
       position: relative;
+      width: 766px;
+      @include media(desktop) {
+        width: 100vw;
+      }
     }
     .slider-text {
       position: absolute;
